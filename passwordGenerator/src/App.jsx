@@ -32,12 +32,34 @@ function App() {
     setPassword(password)
   }
 
-  const copyContent = () => {
-    navigator.clipboard.writeText(password)
-    setBgColor('bg-blue-200')
-    setShowToast(true)
-    setTimeout(() => setBgColor('bg-pink-100'), 2000)
-  }
+  const copyContent = async () => {
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        await navigator.clipboard.writeText(password);
+      } else {
+        const textArea = document.createElement('textarea');
+        textArea.value = password;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-9999px';
+        document.body.appendChild(textArea);
+        textArea.focus();
+        textArea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textArea);
+        if (!document.execCommand('copy')) {
+          throw new Error('Copy failed');
+        }
+        document.body.removeChild(textArea);
+      }
+      setBgColor('bg-blue-200');
+      setShowToast(true);
+      setTimeout(() => setBgColor('bg-pink-100'), 2000);
+    } catch (err) {
+      setBgColor('bg-red-200');
+      setShowToast(true);
+      setTimeout(() => setBgColor('bg-pink-100'), 2000);
+    }
+  };
 
   const closeToast = () => {
     setShowToast(false)
