@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useEffect } from 'react'
+import './App.css'
 import Range from './components/Range'
 import Checkbox from './components/Checkbox'
 import Inputfield from './components/Inputfield'
@@ -71,16 +72,18 @@ function App() {
 
   return (
     <div className='-my-52 '>
-      <div className='flex-row justify-items-center bg-yellow-200 rounded-2xl p-2 w-120' >
-        <h1 className='font-bold'>Password Generator</h1>
+      <div className='flex-row justify-items-center bg-gray-200/55 rounded-2xl p-2 w-120' >
+        <h1 className='font-bold text-2xl p-1'>Password Generator</h1>
         <div className="flex gap-3 justify-center relative my-2">
           <Inputfield bg={bgColor} className="" value={password} />
-          <ButtonCmp onClick={copyContent} name="Copy" className="hover:bg-red-600 bg-zinc-900 p-2 rounded-2xl text-white" />
+          <ButtonCmp onClick={copyContent} name="Copy" className="hover:bg-red-600 bg-zinc-900 p-2 px-3 rounded-2xl text-white" />
         </div>
         <div className='flex gap-7 my-2'>
           <Range name='Length' value={length} min='8' max='35' onChange={(e) => setLength(e.target.value)} />
+          <div id="checkBox" className='flex gap-7'>
           <Checkbox name="numbers" onClick={() => setIsNum((prev) => !prev)} />
-          <Checkbox name="symbols" onClick={() => setIsSymbol((prev) => !prev)} />
+            <Checkbox name="symbols" onClick={() => setIsSymbol((prev) => !prev)} />
+            </div>
         </div>
       </div>
       <Toast message={`Password: ${password} Copied!`} isVisible={showToast} onClose={closeToast} />

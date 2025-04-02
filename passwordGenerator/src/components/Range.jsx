@@ -1,7 +1,7 @@
 import React from 'react'
 function Range(props) {
     return (
-        <div className='flex gap-3'>
+        <div id="slider" className='flex gap-3'>
             <input className='cursor-pointer accent-pink-500'
                 type="range"
                 value={props.value}
