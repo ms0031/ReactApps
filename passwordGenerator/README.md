@@ -1,4 +1,4 @@
-# Password Generator React App
+# [Password Generator React App](https://passgen-1sz.pages.dev/)
 
 A secure and responsive password generator with customizable complexity options, built with React and Tailwind CSS.
 
@@ -15,10 +15,12 @@ A secure and responsive password generator with customizable complexity options,
   - Improved form element spacing
 
 ## Tech Stack
-- React 18
-- Tailwind CSS 3
-- Vite 4
-- Heroicons
+- React 19.0.0
+- Tailwind CSS 4.0.17
+- Vite 6.2.0
+
+## Demo
+- Link - [Password Generator](https://passgen-1sz.pages.dev/)
 
 ## Usage
 1. Adjust length slider (8-64 characters)
