@@ -1,4 +1,4 @@
-# Tailwind CSS Colors Explorer
+# [Tailwind CSS Colors Explorer](https://colors-1wy.pages.dev/)
 
 A simple React application that allows you to explore and visualize Tailwind CSS color palettes. This tool helps developers pick the right color shade for their Tailwind CSS projects.
 
@@ -16,7 +16,7 @@ A simple React application that allows you to explore and visualize Tailwind CSS
 - Vite (for build tooling)
 
 ## Demo
-- Link - [Password Generator](https://tic-tac-toe-3vr.pages.dev/)
+- Link - [Tailwind CSS Colors Explorer](https://colors-1wy.pages.dev/)
 
 ## Screenshots
 | Desktop View |
