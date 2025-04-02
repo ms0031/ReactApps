@@ -7,7 +7,10 @@ export default function Game() {
   const [currentMove, setCurrentMove] = useState(0);
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
-
+  const [isClicked, setIsClicked] = useState(false);
+  const handleClick = () => {
+    setIsClicked(true);
+  };
   function handlePlay(nextSquares) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
@@ -17,6 +20,7 @@ export default function Game() {
   function resetGame() {
     setHistory([Array(9).fill(null)]);
     setCurrentMove(0);
+    window.location.reload();
   }
 
   return (
@@ -24,7 +28,10 @@ export default function Game() {
       <div className="">
         <Board squares={currentSquares} xIsNext={xIsNext} onPlay={handlePlay} />
       </div>
-      <button className="bg-zinc-950 p-4 text-2xl rounded-3xl text-white" onClick={resetGame}>
+      <button className={`p-4 px-18 text-2xl rounded-3xl text-white ${isClicked?'bg-red-600/75 scale-105':'bg-zinc-950'}`} onClick={() => {
+          handleClick();
+          setTimeout(() => resetGame(),500);
+        }}>
         Reset Game
       </button>
     </div>
