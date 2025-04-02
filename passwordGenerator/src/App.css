@@ -8,6 +8,11 @@
       flex-direction: column;
       align-items: center;
     }
+
+    button {
+        font-size: 20px;
+        min-width: 100px;
+    }
   
     .w-120 {
       width: 100%;
@@ -31,14 +36,10 @@
     }
   
     .rounded-2xl {
-      border-radius: 1rem;
+      border-radius: 1.5rem;
     }
   
     input{
-      font-size: 18px;
-    }
-    button {
-      padding: 0 40px;
       font-size: 18px;
     }
     #slider {
