@@ -8,29 +8,42 @@ export default function Game() {
   const xIsNext = currentMove % 2 === 0;
   const currentSquares = history[currentMove];
   const [isClicked, setIsClicked] = useState(false);
+  const [winningLine, setWinningLine] = useState(null);
+  const [resetKey, setResetKey] = useState(0); 
+  
   const handleClick = () => {
     setIsClicked(true);
   };
-  function handlePlay(nextSquares) {
+  
+  function handlePlay(nextSquares, winLine) {
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
+    setWinningLine(winLine);
   }
 
   function resetGame() {
     setHistory([Array(9).fill(null)]);
     setCurrentMove(0);
-    window.location.reload();
+    setWinningLine(null);
+    setIsClicked(false);
+    setResetKey(prevKey => prevKey + 1); 
   }
 
   return (
-    <div className="flex-col justify-items-center bg-white/50 p-8 px-14 rounded-3xl">
+    <div className="flex-col justify-items-center bg-white/30 p-8 px-14 rounded-3xl">
       <div className="">
-        <Board squares={currentSquares} xIsNext={xIsNext} onPlay={handlePlay} />
+        <Board 
+          squares={currentSquares} 
+          xIsNext={xIsNext} 
+          onPlay={handlePlay} 
+          winningLine={winningLine}
+          resetKey={resetKey} 
+        />
       </div>
-      <button className={`p-4 px-18 text-2xl rounded-3xl text-white ${isClicked?'bg-red-600/75 scale-105':'bg-zinc-900/85'}`} onClick={() => {
+      <button className={`p-4 px-18 text-2xl rounded-3xl text-white ${isClicked?'bg-red-600/75 scale-110':'bg-zinc-900/85'}`} onClick={() => {
           handleClick();
-          setTimeout(() => resetGame(),500);
+          setTimeout(() => resetGame(), 250);
         }}>
         Reset Game
       </button>
