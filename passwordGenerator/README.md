@@ -29,7 +29,7 @@ A secure and responsive password generator with customizable complexity options,
 ## Screenshots
 | Desktop View | Mobile View |
 |--------------|-------------|
-| ![Desktop](./screenshot-desktop.png) | ![Mobile](./screenshot-mobile.jpg) |
+| ![Desktop](./screenshot-desktop.png) | ![Mobile](./screenshot-mobile_2.jpg) |
 
 ## Getting Started
 1. Clone the repo: `git clone https://github.com/ms0031/ReactApps.git`
