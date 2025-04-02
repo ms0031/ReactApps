@@ -1,12 +1,51 @@
-# React + Vite
+# Tailwind CSS Colors Explorer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple React application that allows you to explore and visualize Tailwind CSS color palettes. This tool helps developers pick the right color shade for their Tailwind CSS projects.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Browse through all Tailwind CSS color palettes
+- View different shades (50-950) for each color
+- Interactive UI with real-time color preview
+- Easy-to-use dropdown for color selection
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React.js
+- Tailwind CSS
+- Vite (for build tooling)
+
+## Demo
+- Link - [Password Generator](https://tic-tac-toe-3vr.pages.dev/)
+
+## Screenshots
+| Desktop View |
+|--------------|
+![Desktop](./public/screenshot-desktop.png)
+## BUGS & Limitations
+- Responsive Design Issues:
+  - Color buttons overflow on small screens
+  - Dropdown menu not optimized for mobile view
+  - Layout breaks on screens smaller than 640px
+- Future enhancements planned to address these issues
+
+## Getting Started
+1. Clone the repo: `git clone https://github.com/ms0031/ReactApps.git`
+2. Navigate to a project folder (e.g., `cd tailwindcss-colors`)
+3. Install dependencies: `npm install`
+4. Run locally: `npm run dev`
+
+## Usage
+1. Select a color from the dropdown menu
+2. Click on different shade buttons to see various intensities
+3. The background will update to display the selected color and shade
+
+
+## Project Structure
+- src/App.jsx - Main application component
+- src/components/Button.jsx - Color shade selection buttons
+- src/components/Options.jsx - Color dropdown selector
+
+## Acknowledgements
+- Tailwind CSS for the color system
+- React for the UI framework
