@@ -170,8 +170,9 @@ function App() {
     <div className={`w-full h-screen p-4 ${bgClass}`}>
       <Options onChange={(e) => setSelectedColor(e.target.value)} colors={colors} />
       <div className='bg-white/40 bg-cover bg-center
-       rounded-full flex justify-center gap-3 border-2 fixed bottom-10 left-0 right-0 w-fit mx-auto'>
-        <div className='p-4 backdrop-blur-3xl flex justify-center gap-4 rounded-full' >
+       lg:rounded-full rounded-4xl flex justify-center gap-3 border-2 fixed bottom-10 left-0 right-0 w-fit lg:mx-auto mx-2
+       md:max-w-[95%]  md:overflow-hidden md:border-2'>
+        <div className='p-4 lg:py-4 py-10 backdrop-blur-3xl flex lg:flex-nowrap  flex-wrap justify-center gap-4 rounded-full' >
           {colNum.map((num, ind) => {
             return <Button 
               click={() => setSelectedNum(num)}

@@ -139,7 +139,7 @@ function Button({ number = '100', selectedColor = 'red', click }) {
   const textColorClass = Number(number) >= 500 ? 'text-white/90' : 'text-black/90';
   return (
     <button
-      className={`${bgClass} ${textColorClass} font-mono border-2 focus:border-red-600 hover:scale-105 shadow-2xl cursor-pointer border-black px-2.5 py-3 rounded-3xl`}
+      className={`${bgClass} ${textColorClass} font-mono border-2 focus:border-red-600 hover:scale-105 shadow-2xl cursor-pointer border-black lg:px-2.5 px-4 py-3 rounded-3xl`}
       onClick={click}
     >
       {selectedColor?`${selectedColor} ${number}`:""}
