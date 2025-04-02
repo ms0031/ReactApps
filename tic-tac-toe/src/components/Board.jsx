@@ -69,8 +69,8 @@ function Board({ squares, xIsNext, onPlay, winningLine: propWinningLine, resetKe
                     width={windowDimension.width-1}
                     height={windowDimension.height-1}
                     recycle={false}
-                    numberOfPieces={1000}
-                    gravity={0.3}
+                    numberOfPieces={700}
+                    gravity={0.12}
                 />
             )}
             <div>
