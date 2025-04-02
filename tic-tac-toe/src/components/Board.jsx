@@ -1,7 +1,19 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import Square from './Square';
+import Confetti from 'react-confetti';
 
 function Board({ squares, xIsNext, onPlay, winningLine: propWinningLine, resetKey }) {
+    const [windowDimension, setWindowDimension] = useState({ width: window.innerWidth, height: window.innerHeight });
+    
+    useEffect(() => {
+        const handleResize = () => {
+            setWindowDimension({ width: window.innerWidth, height: window.innerHeight });
+        };
+        
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     function calculateWinner(squares) {
         const lines = [
             [0, 1, 2],
@@ -52,6 +64,15 @@ function Board({ squares, xIsNext, onPlay, winningLine: propWinningLine, resetKe
 
     return (
         <> 
+            {winner && (
+                <Confetti
+                    width={windowDimension.width-1}
+                    height={windowDimension.height-1}
+                    recycle={false}
+                    numberOfPieces={1000}
+                    gravity={0.3}
+                />
+            )}
             <div>
                 <div className="mx-2.5 text-3xl text-black/75">{status}</div>
                 <div className="board">
