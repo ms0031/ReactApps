@@ -1,4 +1,4 @@
-# Tic-Tac-Toe Game
+# [Tic-Tac-Toe Game](https://tic-tac-toe-3vr.pages.dev/)
 
 A modern, interactive Tic-Tac-Toe game built with React and Vite, featuring a sleek UI with animations and special effects.
 
@@ -20,6 +20,8 @@ A modern, interactive Tic-Tac-Toe game built with React and Vite, featuring a sl
 - Tailwind CSS
 - React Confetti (for winner celebrations)
 
+## Demo
+- Link - [Password Generator](https://tic-tac-toe-3vr.pages.dev/)
 
 ## Screenshots
 | Desktop View | Mobile View |
