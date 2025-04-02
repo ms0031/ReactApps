@@ -31,11 +31,11 @@ function Board({ squares, xIsNext, onPlay }) {
     const winner = calculateWinner(squares);
     const status = winner
         ? `Winner: ${winner}`
-        : `Next player: ${xIsNext ? 'X' : 'O'}`;
+        : `Current player: ${xIsNext ? 'X' : 'O'}`;
 
     return (
         <> <div>
-            <div className="status">{status}</div>
+            <div className="text-3xl text-black/75">{status}</div>
             <div className="board">
                 {[...Array(9)].map((_, i) => (
                     <Square

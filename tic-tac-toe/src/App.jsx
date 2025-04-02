@@ -28,7 +28,7 @@ export default function Game() {
       <div className="">
         <Board squares={currentSquares} xIsNext={xIsNext} onPlay={handlePlay} />
       </div>
-      <button className={`p-4 px-18 text-2xl rounded-3xl text-white ${isClicked?'bg-red-600/75 scale-105':'bg-zinc-950'}`} onClick={() => {
+      <button className={`p-4 px-18 text-2xl rounded-3xl text-white ${isClicked?'bg-red-600/75 scale-105':'bg-zinc-900/85'}`} onClick={() => {
           handleClick();
           setTimeout(() => resetGame(),500);
         }}>
