@@ -23,10 +23,10 @@ A simple React application that allows you to explore and visualize Tailwind CSS
 |--------------|
 ![Desktop](./public/screenshot-desktop.png)
 ## BUGS & Limitations
-- Responsive Design Issues:
-  - Color buttons overflow on small screens
-  - Dropdown menu not optimized for mobile view
-  - Layout breaks on screens smaller than 640px
+- Responsive Design Issues :
+  - ~~Color buttons overflow on small screens~~ **(fixed)**
+  - ~~Dropdown menu not optimized for mobile view~~ **(fixed)**
+  - ~~Layout breaks on screens smaller than 640px~~ **(fixed)**
 - Future enhancements planned to address these issues
 
 ## Getting Started
