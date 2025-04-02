@@ -41,7 +41,7 @@ A modern, interactive Tic-Tac-Toe game built with React and Vite, featuring a sl
 5. Use the "Reset Game" button to start a new game
 
 ## Project Structure
-
+```plaintext
 tic-tac-toe/
 ├── src/
 │   ├── components/
@@ -52,7 +52,7 @@ tic-tac-toe/
 │   └── main.jsx            # Entry point
 ├── public/                 # Static assets
 └── package.json            # Project dependencies
-
+```
 
 ## Game Logic
 The game implements the following logic:
