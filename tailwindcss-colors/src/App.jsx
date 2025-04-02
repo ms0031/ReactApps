@@ -165,13 +165,13 @@ function App() {
       '900': 'bg-rose-900', '950': 'bg-rose-950'
     }
   };
-  const bgClass = colorClasses[selectedColor]?.[selectedNum] || 'bg-[linear-gradient(60deg,_rgb(247,_149,_51),_rgb(243,_112,_85),_rgb(239,_78,_123),_rgb(161,_102,_171),_rgb(80,_115,_184),_rgb(16,_152,_173),_rgb(7,_179,_155),_rgb(111,_186,_130))]';
+  const bgClass = colorClasses[selectedColor]?.[selectedNum] || 'bg-red-300';
   return (
     <div className={`w-full h-screen p-4 ${bgClass}`}>
       <Options onChange={(e) => setSelectedColor(e.target.value)} colors={colors} />
-      <div className='bg-white/75 bg-cover bg-center
-       rounded-full flex justify-center gap-3 fixed bottom-10 left-0 right-0 w-fit mx-auto'>
-        <div className='p-4 backdrop-blur-3xl flex justify-center gap-5 rounded-full' >
+      <div className='bg-white/40 bg-cover bg-center
+       rounded-full flex justify-center gap-3 border-2 fixed bottom-10 left-0 right-0 w-fit mx-auto'>
+        <div className='p-4 backdrop-blur-3xl flex justify-center gap-4 rounded-full' >
           {colNum.map((num, ind) => {
             return <Button 
               click={() => setSelectedNum(num)}
