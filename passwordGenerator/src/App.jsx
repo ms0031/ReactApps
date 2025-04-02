@@ -4,12 +4,14 @@ import Range from './components/Range'
 import Checkbox from './components/Checkbox'
 import Inputfield from './components/Inputfield'
 import ButtonCmp from './components/ButtonCmp'
+import Toast from './components/Toast'
 function App() {
   const [isSymbol, setIsSymbol] = useState(false)
   const [password, setPassword] = useState('')
   const [isNum, setIsNum] = useState(false)
   const [length, setLength] = useState(8)
   const [bgColor, setBgColor] = useState('bg-pink-100')
+  const [showToast, setShowToast] = useState(false)
 
   const generatePassword = () => {
     let password = ''
@@ -33,7 +35,12 @@ function App() {
   const copyContent = () => {
     navigator.clipboard.writeText(password)
     setBgColor('bg-blue-200')
-    setInterval(() => setBgColor('bg-pink-100'), 2000)
+    setShowToast(true)
+    setTimeout(() => setBgColor('bg-pink-100'), 2000)
+  }
+
+  const closeToast = () => {
+    setShowToast(false)
   }
 
   useEffect(() => {
@@ -54,6 +61,7 @@ function App() {
           <Checkbox name="symbols" onClick={() => setIsSymbol((prev) => !prev)} />
         </div>
       </div>
+      <Toast message={`Password: ${password} Copied!`} isVisible={showToast} onClose={closeToast} />
     </div>
   )
 }
